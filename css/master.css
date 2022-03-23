@@ -1,0 +1,32 @@
+body {
+  background-color: #110b11;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Unica One', cursive;
+  font-size: 3.625rem;
+}
+
+p {
+  color: #f2f4cb;
+  font-family: 'Gayathri', sans-serif;
+}
+
+.nametag_div {
+  text-align: center;
+  margin: 10px;
+  display: inline-block;
+  border: solid 5px #f2f4cb;
+  background-color: #b7990d;
+  padding: 1px 20px 1px;
+  color: #110b11;
+}
+.nametag_p {
+  color: #110b11;
+}
+
+.monkeyimg {
+  width: 10%;
+  margin-top: 10px;
+}
