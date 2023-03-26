@@ -14,11 +14,7 @@ p, a {
   text-decoration: none; /* removes underline of the link*/
 }
 
-a:hover {
-  color: #f2f4cb; 
-}
-
-a:active {
+a:focus, a:active, a:visited {
   color: #f2f4cb;
 }
 
