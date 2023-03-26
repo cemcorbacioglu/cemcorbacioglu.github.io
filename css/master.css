@@ -11,6 +11,7 @@ h1 {
 p, a {
   color: #f2f4cb;
   font-family: 'Gayathri', sans-serif;
+  text-decoration: none; /* removes underline of the link*/
 }
 
 .nametag_div {
