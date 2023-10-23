@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-
+<head>
     <meta charset="utf-8">
     <title>Being Me: "How I become nothing in 25 years and more"</title>
     <link rel="stylesheet" href="css/master.css">
     <link href="https://fonts.googleapis.com/css2?family=Gayathri&family=Unica+One&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/banana.svg"/>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="nametag_div">
-      <h1>I'm Cem.</h1>
-      <p class="nametag_p">an IT guy.</p>
+        <h1>I'm Cem.</h1>
+        <p class="nametag_p">an IT guy.</p>
     </div>
     <br>
     <img class="monkeyimg" src="img/monkey.svg" alt="">
     <p>yep that's me.</p>
-
     <a href="https://www.dropbox.com/s/4bi9tm7dfzqqcyv/pwdpwd.zip?dl=0">here's a shitty pw generator</a>
-    <p></p>
-    <a href="https://www.dropbox.com/s/4bi9tm7dfzqqcyv/pwdpwd.zip?dl=0">Also, do you need a cat?</a>
+
+    <div id="cat-section">
+        <p id="fact"></p>
+        <img id="cat-image" src="" alt="Cat Image" style="width:300px; height:300px;">
+        <button onclick="getCatFactAndImage()">cat?</button>
+    </div>
 
     <script type="text/javascript" src="index.js"></script>
-  </body>
+    <script>
+        function getCatFactAndImage() {
+            fetch('https://meowfacts.herokuapp.com/')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('fact').innerHTML = data.data[0];
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+            fetch('https://cataas.com/cat')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    let objectURL = URL.createObjectURL(blob);
+                    document.getElementById('cat-image').src = objectURL;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
 </html>

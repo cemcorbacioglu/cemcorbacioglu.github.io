@@ -1,6 +1,9 @@
 body {
   background-color: #110b11;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -8,7 +11,7 @@ h1 {
   font-size: 3.625rem;
 }
 
-p, a {
+p, a, button {
   color: #f2f4cb;
   font-family: 'Gayathri', sans-serif;
   text-decoration: none; /* removes underline of the link*/
@@ -34,4 +37,41 @@ a:focus, a:active, a:visited {
 .monkeyimg {
   width: 10%;
   margin-top: 10px;
+}
+
+#cat-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#cat-section button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #f2f4cb;
+  font-family: 'Gayathri', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#cat-section button:hover {
+  text-decoration: none;
+}
+
+
+#fact {
+  color: #f2f4cb;
+  font-family: 'Gayathri', sans-serif;
+}
+
+#cat-image {
+  width: 300px;
+  height: 300px;
+}
+
+body p, #cat-section button {
+  font-size: 1rem; /* Adjust the font size as needed */
 }
